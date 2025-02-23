@@ -3,7 +3,7 @@
 A modern, responsive web application for managing online courses. Built with React, Firebase, and Redux, this application allows users to browse courses, enroll in them, and track their progress.
 
 ## Demo Video
-[![Watch the Video](https://img.youtube.com/vi/qsnHKBkh8W0/0.jpg)](https://youtu.be/qsnHKBkh8W0)
+[![Watch the Video](https://youtu.be/qsnHKBkh8W0)
 
 
 ## Features
@@ -56,7 +56,7 @@ Before you begin, ensure you have the following installed:
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/AmitStredz/react-course-app.git
+   git clone https://github.com/yatigautam/course-app.git
    cd react-course-app
    ```
 
