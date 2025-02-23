@@ -2,6 +2,10 @@
 
 A modern, responsive web application for managing online courses. Built with React, Firebase, and Redux, this application allows users to browse courses, enroll in them, and track their progress.
 
+## Demo Video
+[![Watch the Video](https://img.youtube.com/vi/qsnHKBkh8W0/0.jpg)](https://youtu.be/qsnHKBkh8W0)
+
+
 ## Features
 
 - **Course Catalog**
@@ -38,17 +42,6 @@ A modern, responsive web application for managing online courses. Built with Rea
 - Firebase/Firestore
 - Tailwind CSS
 - React Router
-
-## Demo Video
-[![Watch the Video](https://img.youtube.com/vi/qsnHKBkh8W0/0.jpg)](https://youtu.be/qsnHKBkh8W0)
-
-## Project Screenshots
-
-![HomePage](src/assets/1.png)
-![Listing Page](src/assets/2.png)
-![Dashboard](src/assets/3.png)
-![Dashboard](src/assets/4.png)
-
 
 ## Prerequisites
 
@@ -116,8 +109,8 @@ Before you begin, ensure you have the following installed:
      students: [
      {
      id: 102,
-     name: "Amit",
-     email: amitstredz@gmail.com
+     name: "Yati gautam",
+     email: yatigautam9412@gmail.com
      }
      ```
 
@@ -127,7 +120,4 @@ Before you begin, ensure you have the following installed:
    npm start
    ```
 
-6. **Build for production**
-   ```bash
-   npm run build
-   ```
+
