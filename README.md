@@ -3,7 +3,7 @@
 A modern, responsive web application for managing online courses. Built with React, Firebase, and Redux, this application allows users to browse courses, enroll in them, and track their progress.
 
 ## Demo Video
-[![Watch the Video](https://youtu.be/qsnHKBkh8W0)
+[Watch the Video](https://www.loom.com/share/07f90aea10f942bd8298c9147e5f1fc6?sid=95ec0dee-1fec-4db5-8e78-cee76372af9e)
 
 
 ## Features
