@@ -28,7 +28,7 @@ const HomePage = () => {
             placeholder="Search courses by name or instructor..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-3 pl-10 pr-12 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 pl-10 pr-12 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
           />
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <svg 
@@ -48,7 +48,7 @@ const HomePage = () => {
           {searchQuery && (
             <button
               onClick={() => setSearchQuery("")}
-              className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600"
+              className="absolute inset-y-0 right-0 pr-3 flex items-center text-purple-400 hover:text-gray-600"
             >
               <svg 
                 className="h-5 w-5" 
@@ -67,7 +67,7 @@ const HomePage = () => {
           )}
         </div>
         {/* Search Results Count */}
-        <div className="mt-2 text-sm text-gray-600">
+        <div className="mt-2 text-sm text-purple-600">
           {searchQuery && (
             <p>
               Found {filteredCourses.length} {filteredCourses.length === 1 ? 'course' : 'courses'}
@@ -81,7 +81,7 @@ const HomePage = () => {
       {/* No Results Message */}
       {searchQuery && filteredCourses.length === 0 && (
         <div className="text-center py-8">
-          <div className="text-gray-400 mb-4">
+          <div className="text-purple-400 mb-4">
             <svg 
               className="mx-auto h-12 w-12" 
               fill="none" 
@@ -96,10 +96,10 @@ const HomePage = () => {
               />
             </svg>
           </div>
-          <h3 className="text-lg font-medium text-gray-900 mb-1">
+          <h3 className="text-lg font-medium text-purple-900 mb-1">
             No courses found
           </h3>
-          <p className="text-gray-600">
+          <p className="text-purple-600">
             Try adjusting your search terms or browse all courses
           </p>
         </div>
@@ -113,11 +113,11 @@ const HomePage = () => {
               {/* Course Header */}
               <div className="mb-4">
                 <h2 className="text-xl font-semibold mb-2">
-                  <Link to={`/course/${course.id}`} className="text-blue-600 hover:text-blue-800">
+                  <Link to={`/course/${course.id}`} className="text-yellow-600 hover:text-yellow-800">
                     {course.name}
                   </Link>
                 </h2>
-                <p className="text-gray-600 font-medium">{course.instructor}</p>
+                <p className="text-purple-600 font-medium">{course.instructor}</p>
               </div>
 
               {/* Course Status Badge */}
@@ -131,7 +131,7 @@ const HomePage = () => {
               </div>
 
               {/* Course Details */}
-              <div className="space-y-2 text-sm text-gray-600">
+              <div className="space-y-2 text-sm text-purple-600">
                 <p className="line-clamp-2">{course.description}</p>
                 <div className="flex items-center">
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -156,10 +156,10 @@ const HomePage = () => {
 
               {/* Prerequisites */}
               <div className="mt-4">
-                <h3 className="text-sm font-semibold text-gray-700 mb-2">Prerequisites:</h3>
+                <h3 className="text-sm font-semibold text-purple-700 mb-2">Prerequisites:</h3>
                 <div className="flex flex-wrap gap-2">
                   {course.prerequisites.map((prereq, index) => (
-                    <span key={index} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                    <span key={index} className="bg-gray-100 text-purple-700 text-xs px-2 py-1 rounded">
                       {prereq}
                     </span>
                   ))}
@@ -170,7 +170,7 @@ const HomePage = () => {
               <div className="mt-6">
                 <Link
                   to={`/course/${course.id}`}
-                  className="block w-full text-center bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-300"
+                  className="block w-full text-center bg-yellow-600 text-white py-2 px-4 rounded-md hover:bg-yellow-700 transition-colors duration-300"
                 >
                   View Details
                 </Link>

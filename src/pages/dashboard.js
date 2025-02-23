@@ -55,8 +55,8 @@ const Dashboard = () => {
               onClick={() => handleProgressUpdate(courseId, option)}
               className={`px-3 py-2 text-sm rounded-md transition-colors
                 ${currentProgress === option 
-                  ? 'bg-blue-100 text-blue-700' 
-                  : 'hover:bg-gray-100'}`}
+                  ? 'bg-yellow-100 text-yellow-700' 
+                  : 'hover:bg-purple-100'}`}
             >
               {option}%
             </button>
@@ -82,8 +82,8 @@ const Dashboard = () => {
               }
             }}
             disabled={!customProgress || customProgress < 0 || customProgress > 100}
-            className="bg-blue-600 text-white px-3 py-1 rounded-md text-sm hover:bg-blue-700 
-              disabled:bg-gray-300 disabled:cursor-not-allowed"
+            className="bg-yellow-600 text-white px-3 py-1 rounded-md text-sm hover:bg-yellow-700 
+              disabled:bg-purple-300 disabled:cursor-not-allowed"
           >
             Set
           </button>
@@ -98,9 +98,9 @@ const Dashboard = () => {
       <div className="mb-8 bg-white rounded-lg shadow p-6">
         <h1 className="text-2xl font-bold mb-4">Welcome back, {user.name}!</h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="bg-blue-50 p-4 rounded-lg">
-            <h3 className="text-lg font-semibold text-blue-700">Enrolled Courses</h3>
-            <p className="text-3xl font-bold text-blue-900">{enrolledCourses.length}</p>
+          <div className="bg-yellow-50 p-4 rounded-lg">
+            <h3 className="text-lg font-semibold text-yellow-700">Enrolled Courses</h3>
+            <p className="text-3xl font-bold text-yellow-900">{enrolledCourses.length}</p>
           </div>
           <div className="bg-green-50 p-4 rounded-lg">
             <h3 className="text-lg font-semibold text-green-700">Completed Courses</h3>
@@ -122,8 +122,8 @@ const Dashboard = () => {
               <div key={course.id} className="bg-white rounded-lg shadow p-6 border-l-4 border-green-500">
                 <div className="flex justify-between items-center mb-4">
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900">{course.name}</h3>
-                    <p className="text-gray-600">{course.instructor}</p>
+                    <h3 className="text-lg font-semibold text-purple-900">{course.name}</h3>
+                    <p className="text-purple-600">{course.instructor}</p>
                   </div>
                   <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
                     Completed
@@ -131,13 +131,13 @@ const Dashboard = () => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                   <div className="space-y-2">
-                    <div className="flex items-center text-gray-600">
+                    <div className="flex items-center text-purple-600">
                       <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                       <span>{course.duration}</span>
                     </div>
-                    <div className="flex items-center text-gray-600">
+                    <div className="flex items-center text-purple-600">
                       <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                       </svg>
@@ -161,13 +161,13 @@ const Dashboard = () => {
               <div key={course.id} className="bg-white rounded-lg shadow p-6">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900">{course.name}</h3>
-                    <p className="text-gray-600">{course.instructor}</p>
+                    <h3 className="text-lg font-semibold text-purple-900">{course.name}</h3>
+                    <p className="text-purple-600">{course.instructor}</p>
                   </div>
                   <div className="mt-2 md:mt-0 flex items-center gap-2">
                     <button
                       onClick={() => handleMarkCompleted(course.id)}
-                      className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+                      className="bg-yellow-600 text-white px-4 py-2 rounded-md hover:bg-yellow-700 transition-colors"
                     >
                       Mark as Completed
                     </button>
@@ -177,12 +177,12 @@ const Dashboard = () => {
                 {/* Progress Bar with Update Option */}
                 <div className="mb-4 relative">
                   <div className="flex justify-between items-center mb-1">
-                    <span className="text-sm font-medium text-gray-700">Progress</span>
+                    <span className="text-sm font-medium text-purple-700">Progress</span>
                     <div className="flex items-center gap-2">
-                      <span className="text-sm font-medium text-gray-700">{getProgress(course.id)}%</span>
+                      <span className="text-sm font-medium text-purple-700">{getProgress(course.id)}%</span>
                       <button
                         onClick={() => setEditingProgress(editingProgress === course.id ? null : course.id)}
-                        className="text-blue-600 hover:text-blue-800"
+                        className="text-yellow-600 hover:text-yellow-800"
                       >
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
@@ -190,9 +190,9 @@ const Dashboard = () => {
                       </button>
                     </div>
                   </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2.5">
+                  <div className="w-full bg-purple-200 rounded-full h-2.5">
                     <div
-                      className="bg-blue-600 h-2.5 rounded-full transition-all duration-300"
+                      className="bg-yellow-600 h-2.5 rounded-full transition-all duration-300"
                       style={{ width: `${getProgress(course.id)}%` }}
                     ></div>
                   </div>
@@ -207,13 +207,13 @@ const Dashboard = () => {
                 {/* Course Details */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                   <div className="space-y-2">
-                    <div className="flex items-center text-gray-600">
+                    <div className="flex items-center text-purple-600">
                       <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                       <span>{course.duration}</span>
                     </div>
-                    <div className="flex items-center text-gray-600">
+                    <div className="flex items-center text-purple-600">
                       <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                       </svg>

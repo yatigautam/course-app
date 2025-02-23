@@ -91,7 +91,7 @@ const CoursePage = () => {
       return (
         <button
           disabled
-          className="w-full bg-gray-300 text-gray-500 px-6 py-3 rounded-lg cursor-not-allowed"
+          className="w-full bg-purple-300 text-purple-500 px-6 py-3 rounded-lg cursor-not-allowed"
         >
           Enrollment Closed
         </button>
@@ -104,8 +104,8 @@ const CoursePage = () => {
         disabled={enrolling}
         className={`w-full px-6 py-3 rounded-lg text-white font-medium
           ${enrolling 
-            ? 'bg-blue-400 cursor-wait' 
-            : 'bg-blue-600 hover:bg-blue-700 transform hover:scale-105 transition-all'
+            ? 'bg-yellow-400 cursor-wait' 
+            : 'bg-yellow-600 hover:bg-yellow-700 transform hover:scale-105 transition-all'
           }`}
       >
         {enrolling ? (
@@ -127,11 +127,11 @@ const CoursePage = () => {
     <div className="max-w-4xl mx-auto p-6">
       {/* Course Header */}
       <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-6">
-        <div className="bg-gradient-to-r from-blue-600 to-blue-800 p-6 text-white">
+        <div className="bg-gradient-to-r from-yellow-600 to-yellow-800 p-6 text-white">
           <div className="flex justify-between items-start">
             <div>
               <h1 className="text-3xl font-bold mb-2">{course.name}</h1>
-              <p className="text-blue-100">Taught by {course.instructor}</p>
+              <p className="text-yellow-100">Taught by {course.instructor}</p>
             </div>
             <button
               onClick={handleLikeToggle}
@@ -184,7 +184,7 @@ const CoursePage = () => {
                 {course.prerequisites.map((prereq, index) => (
                   <span 
                     key={index}
-                    className="bg-white text-purple-700 px-3 py-1 rounded-full text-sm border border-gray-200"
+                    className="bg-white text-purple-700 px-3 py-1 rounded-full text-sm border border-purple-200"
                   >
                     {prereq}
                   </span>
@@ -206,7 +206,7 @@ const CoursePage = () => {
                     onClick={() => setExpandedWeek(expandedWeek === week.week ? null : week.week)}
                   >
                     <div className="flex items-center">
-                      <span className="text-blue-600 font-medium mr-2">Week {week.week}</span>
+                      <span className="text-yellow-600 font-medium mr-2">Week {week.week}</span>
                       <span className="font-medium">{week.topic}</span>
                     </div>
                     {expandedWeek === week.week ? (
@@ -216,7 +216,7 @@ const CoursePage = () => {
                     )}
                   </button>
                   {expandedWeek === week.week && (
-                    <div className="px-6 py-4 bg-gray-50">
+                    <div className="px-6 py-4 bg-purple-50">
                       <p className="text-purple-600">{week.content}</p>
                     </div>
                   )}
